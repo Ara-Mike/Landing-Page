@@ -33,7 +33,8 @@ body {
     height: 50px;
     width: 50px;
     border-radius: 25px;
-    margin-right: 20px;
+    margin-right: 1vw;
+    
 }
 
 /* Cart Icon */
@@ -42,6 +43,22 @@ body {
     width: 30px;
     border-radius: 0px;
     margin-left: 5px;
+}
+
+.header .filter-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 0px;
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+.header .search-icon {
+    height: 25px;
+    width: 25px;
+    border-radius: 0px;
+    margin-left: 5px;
+    margin-right: 1vw;
 }
 
 .nav-div img {
@@ -82,7 +99,7 @@ body {
     border: none;
     outline: none;
     padding: 5px 10px;
-    width: 250px;
+    width: 200px;
     margin-left: 5px;
     border-radius: 25px;
     height: 30px;
@@ -139,14 +156,20 @@ body {
 .sulit-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     border: 1px solid #ccc;
     padding: 15px;
     background-color: #fff;
     border-radius: 8px;
-    height: 400px; /* Fixed height for each item */
-    text-align: center;
+    height: 400px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
+}
+
+/* Hover effect */
+.sulit-item:hover {
+    transform: scale(1.05); /* Slightly enlarges the item */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    cursor: zoom-in;
 }
 
 .sulit-item img {
@@ -158,20 +181,38 @@ body {
 }
 
 .sulit-item h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 10px 0;
+    font-size: 17px;
+    font-weight: bolder;
+    margin-top: 1vw;
 }
 
 .sulit-item h4 {
     font-size: 14px;
-    margin: 5px 0;
+    
+}
+
+.sulit-item p.promo-remaining {
+    text-align: right;
+    color: rgb(255, 60, 0);
+    font-weight: bolder;
+}
+
+.sulit-item h3.new-price {
+    text-decoration-style: solid;
+    color: rgb(255, 60, 0); /* Optional: Makes it look like a discounted price */
+}
+
+.sulit-item h4.old-price {
+    text-decoration: line-through;
+    color: gray; /* Optional: Makes it look like a discounted price */
 }
 
 .sulit-item p {
     font-size: 12px;
     color: #555;
-    margin-top: auto; /* Pushes the text to the bottom */
+    
+    margin-bottom: 10px;
+    font-weight:bold ;
 }
 
 .Lightning-Deals-Banner h1,h2 {
@@ -207,39 +248,42 @@ body {
     background-color: #45a049;
 }
 
+.featured-items-banner h3 {
+    text-align: center;
+    font-size: 24px;
+}
+
 
 
 
 
 /* Featured Products */
 /* Featured Products */
+
 .featured-products {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 items per row */
-    gap: 20px;
+    gap: 20px; /* Spacing between items */
     padding: 20px;
-    background-color: #f9f9f9;
-    margin: 1vw;
-    grid-template-rows: repeat(3, auto); /* 3 rows */
 }
 
-.featured-item-1, .featured-item-2, .featured-item-3, .featured-item-4, .featured-item-5, .featured-item-6, .featured-item-7, .featured-item-8, .featured-item-9, .featured-item-10, .featured-item-11, .featured-item-12 {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
+.featured-products > div {
+    border: 1px solid #ddd; /* Optional: Border for each item */
+    border-radius: 10px;
+    padding: 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 300px; /* Ensure uniform height for each item */
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.featured-item-1 img, .featured-item-2 img, .featured-item-3 img, .featured-item-4 img, .featured-item-5 img, .featured-item-6 img, .featured-item-7 img, .featured-item-8 img, .featured-item-9 img, .featured-item-10 img, .featured-item-11 img, .featured-item-12 img {
-    max-width: 100%;
+.featured-products img {
+    width: 100%;
     height: auto;
-    border-radius: 8px;
+    max-height: 150px; /* Set a max height for images */
+    object-fit: contain;
 }
+
+
 
 .featured-item-1 h3, .featured-item-2 h3, .featured-item-3 h3, .featured-item-4 h3, .featured-item-5 h3, .featured-item-6 h3, .featured-item-7 h3, .featured-item-8 h3, .featured-item-9 h3, .featured-item-10 h3, .featured-item-11 h3, .featured-item-12 h3 {
     font-size: 16px;
