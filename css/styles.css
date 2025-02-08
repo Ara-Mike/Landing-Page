@@ -6,8 +6,8 @@
 
 body {
     background-color: azure;
-    margin: 0; /* Ensure no body margin */
-    padding: 0; /* Ensure no body padding */
+    margin: 0;
+    padding: 0;
 }
 
 /* NAVBAR */
@@ -106,22 +106,149 @@ body {
 /* BANNER */
 .banner {
     width: 100%;
-    margin: 0;  /* Ensure no margin around banner */
-    padding: 0; /* Ensure no padding */
-    overflow: hidden; /* Prevent overflow */
-    position: relative; /* Ensures positioning of child elements */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #555;
 }
 
 .banner img.headline {
-    width: 100%;  /* Makes the image take full width of the parent container */
-    height: auto;  /* Let the height adjust automatically to maintain aspect ratio */
-    object-fit: cover;  /* Ensures the image covers the container fully */
-    display: block; /* Removes gap below image */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* Lightning Deals Section */
+.sulit-deals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #555;
+    margin: 1vw;
+}
 
-/* 📌 Mobile View (Small screens) */
+.sulit-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.sulit-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.sulit-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.sulit-item h4 {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.sulit-item p {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Featured Products */
+.featured-products {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.featured-item-1, .featured-item-2, .featured-item-3 {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.featured-item-1 img, .featured-item-2 img, .featured-item-3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.featured-item-1 h3, .featured-item-2 h3, .featured-item-3 h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.featured-item-1 h4, .featured-item-2 h4, .featured-item-3 h4 {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.featured-item-1 p, .featured-item-2 p, .featured-item-3 p {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Client Reviews Section */
+.client-reviews {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.client-reviews img {
+    max-width: 80px;
+    border-radius: 50%;
+}
+
+.client-reviews p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.client-reviews h3 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer Section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer div {
+    width: 25%;
+}
+
+footer div h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer div h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+footer .connect-with-dealdivers img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -140,25 +267,14 @@ body {
         padding: 10px 0;
     }
 
-    .nav-div .search {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .banner img.headline {
-        width: 100%; /* Ensure image fits in mobile */
-        height: auto; /* Maintain aspect ratio */
+    .sulit-deals {
+        grid-template-columns: 1fr;
     }
 }
 
-/* 📌 Tablet View (Medium screens) */
+/* Tablet View */
 @media (max-width: 1024px) {
-    .nav-div ul {
-        gap: 10px;
-    }
-
-    .nav-div ul li {
-        width: 120px;
-        padding: 8px;
+    .sulit-deals {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
