@@ -285,22 +285,54 @@ body {
 
 
 
-.featured-item-1 h3, .featured-item-2 h3, .featured-item-3 h3, .featured-item-4 h3, .featured-item-5 h3, .featured-item-6 h3, .featured-item-7 h3, .featured-item-8 h3, .featured-item-9 h3, .featured-item-10 h3, .featured-item-11 h3, .featured-item-12 h3 {
+.featured-item h3{
     font-size: 16px;
     font-weight: bold;
     margin: 10px 0;
 }
 
-.featured-item-1 h4, .featured-item-2 h4, .featured-item-3 h4, .featured-item-4 h4, .featured-item-5 h4, .featured-item-6 h4, .featured-item-7 h4, .featured-item-8 h4, .featured-item-9 h4, .featured-item-10 h4, .featured-item-11 h4, .featured-item-12 h4 {
+.featured-item h4 {
     font-size: 14px;
     margin: 5px 0;
 }
 
-.featured-item-1 p, .featured-item-2 p, .featured-item-3 p, .featured-item-4 p, .featured-item-5 p, .featured-item-6 p, .featured-item-7 p, .featured-item-8 p, .featured-item-9 p, .featured-item-10 p, .featured-item-11 p, .featured-item-12 p {
+.featured-item p{
     font-size: 12px;
     color: #555;
     margin-top: auto;
 }
+
+.featured-products button {
+    padding: 10px 20px;
+    background-color: #e22c07; /* Customize as needed */
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    text-align: center; /* Ensures the text is centered inside the button */
+    width: 140px;
+    margin: 1vw;
+}
+
+.featured-products button:hover {
+    background-color: #45a049;
+    cursor: pointer;
+}
+
+.featured-item:hover {
+    transform: scale(1.05); /* Slightly enlarges the item */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    cursor: zoom-in;
+
+
+    
+}
+
+.featured-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 
 /* Client Reviews Section */
 .client-reviews {
