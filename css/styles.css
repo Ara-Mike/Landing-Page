@@ -15,7 +15,7 @@ body {
     padding: 0;
 }
 
-/* NAVBAR */
+
 .header {
     width: 100%;
     margin: 0;
@@ -32,7 +32,7 @@ body {
     height: 70px;
 }
 
-/* LOGO */
+
 .navbar img {
     height: 50px;
     width: 50px;
@@ -41,7 +41,7 @@ body {
     
 }
 
-/* Cart Icon */
+
 .header .cart-icon {
     height: 30px;
     width: 30px;
@@ -69,7 +69,7 @@ body {
     border-radius: 0px;
 }
 
-/* NAV MENU */
+
 .nav-div ul {
     list-style-type: none;
     display: flex;
@@ -124,7 +124,7 @@ body {
     vertical-align: middle;
 }
 
-/* BANNER */
+
 .banner {
     width: 100%;
     margin: 0;
@@ -141,7 +141,7 @@ body {
     display: block;
 }
 
-/* Lightning Deals Section */
+
 .sulit-deals {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -151,7 +151,7 @@ body {
     margin: 1vw;
     margin-top: 0;
     grid-template-rows: repeat(2, auto);
-    text-align: center; /* Added to center everything inside the container */
+    text-align: center; 
     justify-content: center;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -166,13 +166,13 @@ body {
     border-radius: 8px;
     height: 400px;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* Hover effect */
+
 .sulit-item:hover {
-    transform: scale(1.05); /* Slightly enlarges the item */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transform: scale(1.05); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
     cursor: zoom-in;
 }
 
@@ -180,8 +180,8 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    object-fit: contain; /* Ensures images do not distort */
-    max-height: 200px; /* Set max-height for images */
+    object-fit: contain; 
+    max-height: 200px; 
 }
 
 .sulit-item h3 {
@@ -203,12 +203,12 @@ body {
 
 .sulit-item h3.new-price {
     text-decoration-style: solid;
-    color: rgb(255, 60, 0); /* Optional: Makes it look like a discounted price */
+    color: rgb(255, 60, 0); 
 }
 
 .sulit-item h4.old-price {
     text-decoration: line-through;
-    color: gray; /* Optional: Makes it look like a discounted price */
+    color: gray; 
 }
 
 .sulit-item p {
@@ -235,13 +235,13 @@ body {
 
 .shop-now-btn {
     padding: 10px 20px;
-    background-color: #4CAF50; /* Customize as needed */
+    background-color: #4CAF50; 
     color: white;
     font-size: 16px;
     border: none;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px; 
     cursor: pointer;
-    text-align: center; /* Ensures the text is centered inside the button */
+    text-align: center; 
     width: 130px;
     margin-left: 140%;
     margin-top: 2%;
@@ -261,18 +261,15 @@ body {
 
 
 
-/* Featured Products */
-/* Featured Products */
-
 #featured-products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
-    gap: 20px; /* Spacing between items */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
     padding: 20px;
 }
 
 #featured-products > div {
-    border: 1px solid #ddd; /* Optional: Border for each item */
+    border: 1px solid #ddd; 
     border-radius: 10px;
     padding: 15px;
     text-align: center;
@@ -283,7 +280,7 @@ body {
 #featured-products img {
     width: 100%;
     height: auto;
-    max-height: 150px; /* Set a max height for images */
+    max-height: 150px; 
     object-fit: contain;
 }
 
@@ -308,12 +305,12 @@ body {
 
 #featured-products button {
     padding: 10px 20px;
-    background-color: #e22c07; /* Customize as needed */
+    background-color: #e22c07; 
     color: rgb(0, 0, 0);
     font-size: 16px;
     border: none;
-    border-radius: 20px; /* Rounded corners */
-    text-align: center; /* Ensures the text is centered inside the button */
+    border-radius: 20px; 
+    text-align: center; 
     width: 140px;
     margin: 1vw;
 }
@@ -324,8 +321,8 @@ body {
 }
 
 .featured-item:hover {
-    transform: scale(1.05); /* Slightly enlarges the item */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transform: scale(1.05); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
     cursor: zoom-in;
     
 }
@@ -338,7 +335,7 @@ body {
 
 
 
-/* Client Reviews Section */
+
 .client-reviews {
     margin-top: 30px;
     padding: 10px;
@@ -361,17 +358,30 @@ body {
     margin-top: 10px;
 }
 
-/* Footer Section */
+
 footer {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     background-color: #333;
     color: #fff;
+    flex-wrap: wrap;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3 ease;
+}
+
+footer a:hover {
+    color: #4CAF50;
 }
 
 footer div {
     width: 25%;
+    margin-bottom: 20px;
 }
 
 footer div h3 {
@@ -379,43 +389,61 @@ footer div h3 {
     margin-bottom: 10px;
 }
 
-footer div h4 {
-    font-size: 14px;
-    margin-bottom: 5px;
+footer div ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer div ul li {
+    margin: 5px 0;
 }
 
 footer .connect-with-dealdivers img {
     width: 30px;
     margin-right: 10px;
+    transition: transform 0.3s ease; 
 }
 
-/* Mobile View */
-@media (max-width: 768px) {
-    .navbar {
+footer .connect-with-dealdivers img:hover {
+    transform: scale(1.1); 
+}
+
+footer .company-info, footer .customer-service, footer .help {
+    padding: 10px;
+}
+
+footer .company-info h3,
+footer .customer-service h3,
+footer .help h3 {
+    margin-bottom: 15px;
+}
+
+footer .company-info ul,
+footer .customer-service ul,
+footer .help ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer .company-info li,
+footer .customer-service li,
+footer .help li {
+    margin: 8px 0;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
         flex-direction: column;
         align-items: center;
     }
 
-    .nav-div ul {
-        flex-direction: column;
+    footer div {
         width: 100%;
         text-align: center;
-        gap: 15px;
     }
 
-    .nav-div ul li {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .sulit-deals {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Tablet View */
-@media (max-width: 1024px) {
-    .sulit-deals {
-        grid-template-columns: repeat(2, 1fr);
+    footer .connect-with-dealdivers img {
+        width: 40px;
+        margin: 5px;
     }
 }
