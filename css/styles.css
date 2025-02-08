@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -59,7 +60,6 @@ body {
 .nav-div ul li {
     display: inline-block;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
     border-radius: 25px;
     padding: 5px 10px;
@@ -110,7 +110,7 @@ body {
     padding: 0;
     overflow: hidden;
     position: relative;
-    background-color: #555;
+    
 }
 
 .banner img.headline {
@@ -128,20 +128,33 @@ body {
     padding: 20px;
     background-color: #555;
     margin: 1vw;
+    margin-top: 0;
+    grid-template-rows: repeat(2, auto);
+    text-align: center; /* Added to center everything inside the container */
+    justify-content: center;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .sulit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
+    padding: 15px;
     background-color: #fff;
     border-radius: 8px;
+    height: 400px; /* Fixed height for each item */
+    text-align: center;
 }
 
 .sulit-item img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    object-fit: contain; /* Ensures images do not distort */
+    max-height: 200px; /* Set max-height for images */
 }
 
 .sulit-item h3 {
@@ -158,43 +171,91 @@ body {
 .sulit-item p {
     font-size: 12px;
     color: #555;
+    margin-top: auto; /* Pushes the text to the bottom */
 }
+
+.Lightning-Deals-Banner h1,h2 {
+    text-align: center;
+    background-color: rgb(39, 69, 124);
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: white;
+    
+}
+
+.Lightning-Deals-Banner h1 {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.shop-now-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Customize as needed */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    text-align: center; /* Ensures the text is centered inside the button */
+    width: 130px;
+    margin-left: 140%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.shop-now-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+
 
 /* Featured Products */
+/* Featured Products */
 .featured-products {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
     gap: 20px;
     padding: 20px;
+    background-color: #f9f9f9;
+    margin: 1vw;
+    grid-template-rows: repeat(3, auto); /* 3 rows */
 }
 
-.featured-item-1, .featured-item-2, .featured-item-3 {
+.featured-item-1, .featured-item-2, .featured-item-3, .featured-item-4, .featured-item-5, .featured-item-6, .featured-item-7, .featured-item-8, .featured-item-9, .featured-item-10, .featured-item-11, .featured-item-12 {
     background-color: #fff;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px; /* Ensure uniform height for each item */
 }
 
-.featured-item-1 img, .featured-item-2 img, .featured-item-3 img {
+.featured-item-1 img, .featured-item-2 img, .featured-item-3 img, .featured-item-4 img, .featured-item-5 img, .featured-item-6 img, .featured-item-7 img, .featured-item-8 img, .featured-item-9 img, .featured-item-10 img, .featured-item-11 img, .featured-item-12 img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.featured-item-1 h3, .featured-item-2 h3, .featured-item-3 h3 {
+.featured-item-1 h3, .featured-item-2 h3, .featured-item-3 h3, .featured-item-4 h3, .featured-item-5 h3, .featured-item-6 h3, .featured-item-7 h3, .featured-item-8 h3, .featured-item-9 h3, .featured-item-10 h3, .featured-item-11 h3, .featured-item-12 h3 {
     font-size: 16px;
     font-weight: bold;
     margin: 10px 0;
 }
 
-.featured-item-1 h4, .featured-item-2 h4, .featured-item-3 h4 {
+.featured-item-1 h4, .featured-item-2 h4, .featured-item-3 h4, .featured-item-4 h4, .featured-item-5 h4, .featured-item-6 h4, .featured-item-7 h4, .featured-item-8 h4, .featured-item-9 h4, .featured-item-10 h4, .featured-item-11 h4, .featured-item-12 h4 {
     font-size: 14px;
     margin: 5px 0;
 }
 
-.featured-item-1 p, .featured-item-2 p, .featured-item-3 p {
+.featured-item-1 p, .featured-item-2 p, .featured-item-3 p, .featured-item-4 p, .featured-item-5 p, .featured-item-6 p, .featured-item-7 p, .featured-item-8 p, .featured-item-9 p, .featured-item-10 p, .featured-item-11 p, .featured-item-12 p {
     font-size: 12px;
     color: #555;
+    margin-top: auto;
 }
 
 /* Client Reviews Section */
