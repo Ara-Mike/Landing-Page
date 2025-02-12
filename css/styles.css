@@ -25,7 +25,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:start;
     padding: 10px 20px;
     background-color: rgb(39, 69, 124);
     width: 100%;
@@ -84,6 +84,8 @@ body {
     font-weight: bolder;
     border-radius: 25px;
     padding: 5px 10px;
+    margin: .5vw;
+    margin-left: 1vw;
 }
 
 .nav-div ul li:hover {
@@ -97,14 +99,16 @@ body {
     text-align: center;
     text-decoration: none;
     color: white;
+    
 }
 
 .search-input {
     border: none;
     outline: none;
     padding: 5px 10px;
-    width: 200px;
-    margin-left: 5px;
+    width: 300px;
+    margin-left: 1vw;
+    margin-right: 1vw;
     border-radius: 25px;
     height: 30px;
 }
@@ -252,12 +256,47 @@ body {
     background-color: #45a049;
 }
 
-.featured-items-banner h3 {
+.suggestions-section ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .suggestions-section li {
+    flex: 1;
     text-align: center;
-    font-size: 24px;
-}
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .suggestions-section button {
+    display: inline-flex;
+    justify-content: center;
+    width: 80%;
+    padding: 10px 20px;
+    background-color: rgb(255, 60, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+    font-weight: bolder;
+    border: none;
+  }
+  
+  .suggestions-section button:hover {
+    background-color: #ef2704;
+    transform: scale(1.05);
+  }
 
-
+  .suggestions-section {
+    background-color: #555;
+    margin: 1vw;
+    margin-top: 0;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
 
 
 
@@ -267,6 +306,47 @@ body {
     gap: 20px; 
     padding: 20px;
 }
+
+.featured-products-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+.featured-products-pagination button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s, color 0.3s;
+}
+.featured-products-pagination button:hover {
+    background-color: #007bff;
+    color: white;
+}
+.featured-products-pagination button.active {
+    background-color: #0056b3;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .featured-products-pagination button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-products-pagination button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+
 
 #featured-products > div {
     border: 1px solid #ddd; 
@@ -402,84 +482,85 @@ footer {
     background-color: #333;
     color: #fff;
     flex-wrap: wrap;
-}
-
-footer a {
+  }
+  
+  footer a {
     text-decoration: none;
     color: white;
     font-size: 14px;
-    transition: color 0.3 ease;
-}
-
-footer a:hover {
-    color: #4CAF50;
-}
-
-footer div {
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #3723e8;
+  }
+  
+  .footer-section {
     width: 25%;
     margin-bottom: 20px;
-}
-
-footer div h3 {
+  }
+  
+  .footer-section h3 {
     font-size: 18px;
     margin-bottom: 10px;
-}
-
-footer div ul {
+    border-bottom: 2px solid #3723e8;
+    padding-bottom: 5px;
+  }
+  
+  .footer-section ul {
     list-style-type: none;
     padding: 0;
-}
-
-footer div ul li {
-    margin: 5px 0;
-}
-
-footer .connect-with-dealdivers img {
-    width: 30px;
-    margin-right: 10px;
-    transition: transform 0.3s ease; 
-}
-
-footer .connect-with-dealdivers img:hover {
-    transform: scale(1.1); 
-}
-
-footer .company-info, footer .customer-service, footer .help {
-    padding: 10px;
-}
-
-footer .company-info h3,
-footer .customer-service h3,
-footer .help h3 {
-    margin-bottom: 15px;
-}
-
-footer .company-info ul,
-footer .customer-service ul,
-footer .help ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-footer .company-info li,
-footer .customer-service li,
-footer .help li {
+  }
+  
+  .footer-section ul li {
     margin: 8px 0;
-}
+  }
+  
+  .connect-with-dealdivers img {
+    width: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+    margin-left: 1vw;
+  }
+  
+  .connect-with-dealdivers img:hover {
+    transform: scale(1.1);
+  }
 
-@media screen and (max-width: 768px) {
+  .connect-with-dealdivers a {
+    margin-right: 10px; /* Adds space between icons */
+  }
+
+  .connect-with-dealdivers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 22%; /* Adjusting the width slightly to accommodate four sections */
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  @media screen and (max-width: 768px) {
     footer {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
-    footer div {
-        width: 100%;
-        text-align: center;
+    .footer-section {
+      width: 100%;
+      text-align: center;
     }
-
-    footer .connect-with-dealdivers img {
-        width: 40px;
-        margin: 5px;
+    .connect-with-dealdivers img {
+      width: 40px;
+      margin: 5px;
     }
-}
+  }
+  
+  @media screen and (max-width: 480px) {
+    .featured-products-pagination button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
